@@ -1,0 +1,14 @@
+﻿@page "/"
+
+<h1>Upload Direct To Server API Example</h1>
+
+<form action="Upload" 
+			enctype="multipart/form-data" 
+			target="uploadframe" 
+			method="post" 
+			name="fileupload"	>
+		<input type="file" accept="video" name="file" />
+			<button>Upload</button>
+</form>
+<iframe id="uploadframe" name="uploadframe" @onload=@(()=>Console.WriteLine("iframe loaded"))>
+</iframe>
