@@ -2,7 +2,7 @@
 
 <h1>Upload Direct To Server API Example</h1>
 
-<form action="Upload" 
+<form id="form1" action="Upload" 
 			enctype="multipart/form-data" 
 			target="uploadframe" 
 			method="post" 
@@ -10,5 +10,17 @@
 		<input type="file" accept="video" name="file" />
 			<button>Upload</button>
 </form>
-<iframe id="uploadframe" name="uploadframe" @onload=@(()=>Console.WriteLine("iframe loaded"))>
+<iframe id="uploadframe" name="uploadframe">
+	Upload will be confirmed here...
 </iframe>
+
+<h1>Upload Direct To Server API Example - new Tab</h1>
+
+<form id="form2" action="Upload" 
+			enctype="multipart/form-data" 
+			target="_blank" 
+			method="post" 
+			name="fileupload"	>
+		<input type="file" accept="video" name="file" />
+			<button>Upload</button>
+</form>
